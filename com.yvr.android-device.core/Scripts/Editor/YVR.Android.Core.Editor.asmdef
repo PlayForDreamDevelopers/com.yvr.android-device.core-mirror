@@ -1,0 +1,27 @@
+{
+    "name": "YVR.Android-Device.Core.Editor",
+    "rootNamespace": "YVR.AndroidDevice.Core.Editor",
+    "references": [
+        "GUID:c001ac5eb50625c4398c23d335026aad",
+        "GUID:5c087f2e14bd3fd47a91ac4199ddef86",
+        "GUID:27b19b20d0045ef4996a13b7e62668a6",
+        "GUID:a641dd5e2f276d344b7092e9ce27ae2e"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [
+        {
+            "name": "com.yvr.tools",
+            "expression": "0.4.3",
+            "define": "USE_YVR_TOOLS"
+        }
+    ],
+    "noEngineReferences": false
+}

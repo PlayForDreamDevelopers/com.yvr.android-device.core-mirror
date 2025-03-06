@@ -1,0 +1,102 @@
+﻿[
+    {
+        "firstInstallTime": 1646723892000,
+        "canUninstall": false,
+        "lastUpdate": 1646723892000,
+        "name": "无线串流工具",
+        "packageName": "alvr.client.yvr",
+        "versionName": "16.0.0-rc2",
+        "appDof": 2,
+        "versionCode": 61
+    },
+    {
+        "firstInstallTime": 1646910585101,
+        "canUninstall": true,
+        "lastUpdate": 1646910585101,
+        "name": "国家反诈中心",
+        "packageName": "com.hicorenational.antifraud",
+        "versionName": "1.1.22",
+        "appDof": 2,
+        "versionCode": 87
+    },
+    {
+        "firstInstallTime": 1646724005365,
+        "canUninstall": true,
+        "lastUpdate": 1646724005365,
+        "name": "百度",
+        "packageName": "com.baidu.searchbox",
+        "versionName": "12.23.5.10",
+        "appDof": 2,
+        "versionCode": 106714368
+    },
+    {
+        "firstInstallTime": 1646723991895,
+        "canUninstall": true,
+        "lastUpdate": 1646723991895,
+        "name": " 360手机卫士",
+        "packageName": "com.qihoo360.mobilesafe",
+        "versionName": "8.8.8",
+        "appDof": 2,
+        "versionCode": 274
+    },
+    {
+        "firstInstallTime": 1646724100674,
+        "canUninstall": true,
+        "lastUpdate": 1646724158666,
+        "name": "抖音",
+        "packageName": "com.ss.android.ugc.aweme",
+        "versionName": "17.7.0",
+        "appDof": 2,
+        "versionCode": 170701
+    },
+    {
+        "firstInstallTime": 1646723892000,
+        "canUninstall": false,
+        "lastUpdate": 1646723892000,
+        "name": "Firefox Reality",
+        "packageName": "org.mozilla.vrbrowser",
+        "versionName": "12.3",
+        "appDof": 1,
+        "versionCode": 1
+    },
+    {
+        "firstInstallTime": 1646723892000,
+        "canUninstall": false,
+        "lastUpdate": 1646723892000,
+        "name": "YVR影院",
+        "packageName": "com.yvr.launcher2d",
+        "versionName": "0.3.1",
+        "appDof": 1,
+        "versionCode": 1
+    },
+    {
+        "firstInstallTime": 1646880394060,
+        "canUninstall": true,
+        "lastUpdate": 1646880394060,
+        "name": "爱奇艺极速版",
+        "packageName": "com.qiyi.video.lite",
+        "versionName": "1.12.1",
+        "appDof": 2,
+        "versionCode": 112
+    },
+    {
+        "firstInstallTime": 1646898347846,
+        "canUninstall": true,
+        "lastUpdate": 1646898347846,
+        "name": "Open Saber For Test",
+        "packageName": "com.yvr.opensabertest",
+        "versionName": "0.1.1-dev",
+        "appDof": 2,
+        "versionCode": 1
+    },
+    {
+        "firstInstallTime": 1646903971262,
+        "canUninstall": true,
+        "lastUpdate": 1646906957735,
+        "name": "Demo",
+        "packageName": "com.yvr.demo",
+        "versionName": "1.0",
+        "appDof": 2,
+        "versionCode": 1
+    }
+]

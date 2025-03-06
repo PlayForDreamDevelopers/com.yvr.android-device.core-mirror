@@ -1,0 +1,21 @@
+using YVR.AndroidDevice.Core;
+
+namespace {namespace}
+{
+    public class {name}Mocker : AJCMocker
+    {
+        [UnityEngine.Scripting.Preserve]
+        public {name}Mocker() 
+        {
+            {name}Elements elements = {name}Mgr.elements;
+            
+            // Add your custom mock data here
+            // Example:
+            // MockAction(elements.{elementName}, MockFunction)
+            // private void MockFunction(object[] args)
+            // {
+            //     // Do something
+            // }
+        }
+    }
+}

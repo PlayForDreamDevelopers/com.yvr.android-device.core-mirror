@@ -1,0 +1,20 @@
+{
+    "name": "YVR.Android-Device.Core.Runtime",
+    "rootNamespace": "YVR.AndroidDevice.Core",
+    "references": [
+        "GUID:5c087f2e14bd3fd47a91ac4199ddef86",
+        "GUID:a641dd5e2f276d344b7092e9ce27ae2e",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [
+        "Newtonsoft.Json.dll"
+    ],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

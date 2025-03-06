@@ -1,0 +1,8 @@
+using YVR.AndroidDevice.Core;
+
+namespace {namespace}
+{
+    public class {name}Mgr : AJCMgrSingleton<{name}Mgr, {name}Mocker, {name}Elements>
+    {
+    }
+}

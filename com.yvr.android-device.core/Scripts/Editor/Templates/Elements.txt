@@ -1,0 +1,11 @@
+using YVR.AndroidDevice.Core;
+
+namespace {namespace}
+{
+    public class {name}Elements : IAJCElements
+    {
+        public string className => "";
+        // Define function/property in android java class
+        // The format should be "public readonly string {name} = {value};"
+    }
+}
