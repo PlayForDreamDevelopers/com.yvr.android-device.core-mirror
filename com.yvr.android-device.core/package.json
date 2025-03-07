@@ -1,11 +1,7 @@
 {
   "name": "com.yvr.android-device.core",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "displayName": "YVR Android Device Core",
   "description": "This is the package of android devices core",
-  "unity": "2020.3",
-  "dependencies": {
-    "com.yvr.json-parser": "0.0.10",
-    "com.yvr.unirx": "0.2.1"
-  }
+  "unity": "2020.3"
 }

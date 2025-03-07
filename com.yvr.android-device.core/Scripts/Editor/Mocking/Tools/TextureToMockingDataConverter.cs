@@ -1,3 +1,4 @@
+#if USE_YVR_UNIRX
 using UnityEngine;
 using UnityEditor;
 using System.IO;
@@ -49,3 +50,4 @@ namespace YVR.AndroidDevice.Core.Editor
         }
     }
 }
+#endif

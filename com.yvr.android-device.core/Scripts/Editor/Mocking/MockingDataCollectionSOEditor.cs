@@ -1,3 +1,4 @@
+#if USE_YVR_JSON_PARSER
 using System;
 using System.IO;
 using Newtonsoft.Json;
@@ -65,3 +66,4 @@ namespace YVR.AndroidDevice.Core.Editor
         }
     }
 }
+#endif

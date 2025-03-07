@@ -1,5 +1,11 @@
 # ChangeLog
 
+## [1.2.2] - 2025-03-07
+
+### Added
+
+- 让 Json-Parser 和 YVR UniRx 作为弱依赖
+
 ## [1.2.1] - 2025-03-07
 
 ### Added

@@ -1,3 +1,4 @@
+#if USE_YVR_UNIRX
 using System.Threading;
 using UniRx;
 using UnityEngine;
@@ -54,3 +55,4 @@ namespace YVR.AndroidDevice.Core
         }
     }
 }
+#endif

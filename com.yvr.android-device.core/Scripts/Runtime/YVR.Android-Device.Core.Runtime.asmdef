@@ -15,6 +15,17 @@
     ],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.yvr.unirx",
+            "expression": "",
+            "define": "USE_YVR_UNIRX"
+        },
+        {
+            "name": "com.yvr.json-parser",
+            "expression": "",
+            "define": "USE_YVR_JSON_PARSER"
+        }
+    ],
     "noEngineReferences": false
 }
