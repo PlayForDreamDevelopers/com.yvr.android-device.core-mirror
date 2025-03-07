@@ -1,5 +1,15 @@
 # ChangeLog
 
+## [1.2.1] - 2025-03-07
+
+### Added
+
+- AJCInvoker 增加直接使用 AndroidJavaObject 的构造函数
+
+### Fixed
+
+- 修复 CallJNIStatic 对返回值为 AndroidJavaObject 的函数调用失败的问题
+
 ## [1.2.0] - 2025-03-05
 
 ### Changed

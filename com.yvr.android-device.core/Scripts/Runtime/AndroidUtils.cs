@@ -72,7 +72,11 @@ namespace YVR.AndroidDevice.Core
                     : AndroidJNI.CallObjectMethod(typePtr, methodPtr, jniArgs);
                 if (retPtr != IntPtr.Zero)
                 {
-                    ret = AndroidJNIHelper.ConvertFromJNIArray<T>(retPtr);
+                    if (typeof(T) == typeof(AndroidJavaObject))
+                        ret = (T) (object) new AndroidJavaObject(retPtr);
+                    else // Bug: if the ret is not array, it will throw exception
+                        ret = AndroidJNIHelper.ConvertFromJNIArray<T>(retPtr);
+
                     AndroidJNI.DeleteLocalRef(retPtr);
                 }
             }

@@ -19,8 +19,6 @@ namespace YVR.AndroidDevice.Core
         public override IntPtr objPtr => m_ObjPtr;
         public override IntPtr classPtr => m_ClassPtr;
 
-        [Obsolete("The concept of javaClass is wrong; javaClass should be the type, and javaObject should be an instance; but now it means java object, so use javaObject property.")]
-        public AndroidJavaObject javaClass => javaObject;
         public AndroidJavaObject javaObject => m_JavaObject;
         private ConcurrentDictionary<string, IntPtr> m_Method2PtrDic = new();
 
@@ -31,7 +29,7 @@ namespace YVR.AndroidDevice.Core
         /// <param name="args">Constructing parameters. Warning! For java objects, to keep multiple arguments of the same type, look at the implementation of this method.</param>
         public AJCInvoker(string className, params object[] args)
         {
-            if (args is { Length: > 0 })
+            if (args is {Length: > 0})
             {
                 var first = args[0];
                 this.Info($"Create AJCInvoker with {first?.GetType().FullName}");
@@ -63,6 +61,14 @@ namespace YVR.AndroidDevice.Core
             m_ObjPtr = m_JavaObject.GetRawObject();
         }
 
+
+        public AJCInvoker(AndroidJavaObject javaObject)
+        {
+            m_JavaObject = javaObject;
+            m_ClassPtr = m_JavaObject.GetRawClass();
+            m_ObjPtr = m_JavaObject.GetRawObject();
+        }
+
         public override T CallStatic<T>(string methodName, params object[] args)
         {
             return m_JavaObject.CallStatic<T>(methodName, args);
@@ -73,10 +79,7 @@ namespace YVR.AndroidDevice.Core
             return m_JavaObject.Call<T>(methodName, args);
         }
 
-        public override void Call(string methodName, params object[] args)
-        {
-            m_JavaObject.Call(methodName, args);
-        }
+        public override void Call(string methodName, params object[] args) { m_JavaObject.Call(methodName, args); }
 
         public override void CallStatic(string methodName, params object[] args)
         {
@@ -116,19 +119,19 @@ namespace YVR.AndroidDevice.Core
         public override T CallJNIStaticOverload<T>(string methodName, string overloadMethodName, params object[] args)
         {
             GetMethodPtrAndArgs<T>(methodName, args, true, out IntPtr methodPtr, out jvalue[] jniArgs,
-                overloadMethodName);
+                                   overloadMethodName);
             return AndroidUtils.CallJNIMethod<T>(m_ClassPtr, methodPtr, true, jniArgs, args);
         }
 
         public override T CallJNIOverload<T>(string methodName, string overloadMethodName, params object[] args)
         {
             GetMethodPtrAndArgs<T>(methodName, args, false, out IntPtr methodPtr, out jvalue[] jniArgs,
-                overloadMethodName);
+                                   overloadMethodName);
             return AndroidUtils.CallJNIMethod<T>(m_ObjPtr, methodPtr, false, jniArgs, args);
         }
 
         private void GetMethodPtrAndArgs(string methodName, object[] args, bool isStatic, out IntPtr methodPtr,
-            out jvalue[] jniArgs, string overLoadMethodName = "")
+                                         out jvalue[] jniArgs, string overLoadMethodName = "")
         {
             string caredName = string.IsNullOrEmpty(overLoadMethodName) ? methodName : overLoadMethodName;
             if (!m_Method2PtrDic.ContainsKey(caredName))
@@ -140,7 +143,7 @@ namespace YVR.AndroidDevice.Core
         }
 
         private void GetMethodPtrAndArgs<T>(string methodName, object[] args, bool isStatic, out IntPtr methodPtr,
-            out jvalue[] jniArgs, string overLoadMethodName = "")
+                                            out jvalue[] jniArgs, string overLoadMethodName = "")
         {
             string caredName = string.IsNullOrEmpty(overLoadMethodName) ? methodName : overLoadMethodName;
             if (!m_Method2PtrDic.ContainsKey(caredName))
