@@ -1,5 +1,17 @@
 # ChangeLog
 
+## [1.2.4] - 2025-05-20
+
+### Changed
+
+- 调整代码结构
+
+## [1.2.3] - 2025-04-25
+
+### Added
+
+- 增加ConsumerProxy,JavaObjectConverter,用于安卓和C#对象之间的转化
+
 ## [1.2.2] - 2025-03-07
 
 ### Added
